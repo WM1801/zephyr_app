@@ -1,0 +1,15 @@
+/ { 
+    aliases{
+        gpio05 = &gpio_led05; 
+    }; 
+
+    leds {
+        compatible = "gpio-leds"; 
+        gpio_led05: gpio_05{
+            gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>; 
+            label = "User LD1";
+        };
+    };
+};
+
+
