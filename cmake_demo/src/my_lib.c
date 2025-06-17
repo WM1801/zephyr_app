@@ -7,5 +7,5 @@
 
 void say_hello() {
     printk("Printk: Hello from my_lib\n");
-    printf("Printf: Hello from my_lib\n");
+    printf("Printf: Hello from my_lib_1606\n");
 }
