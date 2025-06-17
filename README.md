@@ -49,4 +49,7 @@ west build -b jc4827w543/esp32s3/procpu ./app/cmake_demo/ --pristine
 
 west flash 
 
+
+west build -b jc4827w543/esp32s3/procpu ./app/tst1/ --pristine -- -DDTC_OVERLAY_FILE=/workdir/app/tst1/board/jc4827w543.overlay 
+
 ```
