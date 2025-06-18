@@ -53,3 +53,7 @@ west flash
 west build -b jc4827w543/esp32s3/procpu ./app/tst1/ --pristine -- -DDTC_OVERLAY_FILE=/workdir/app/tst1/board/jc4827w543.overlay 
 
 ```
+запуск Kconfig
+```
+west build -b jc4827w543/esp32s3/procpu ./app/tst1/ -t menuconfig --pristine -- -DDTC_OVERLAY_FILE=/workdir/app/tst1/board/jc4827w543.overlay 
+```
