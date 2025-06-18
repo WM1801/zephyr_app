@@ -21,3 +21,8 @@ west build -b jc4827w543/esp32s3/procpu -t menuconfig ./app/tst1/ --pristine -- 
 ```
 west flash 
 ```
+
+***сравнение конгфигов удобно производить через команду:***
+```
+diff build/zephyr/.config.old build/zephyr/.config
+```
