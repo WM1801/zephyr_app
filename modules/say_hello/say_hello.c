@@ -3,7 +3,7 @@
 #include <zephyr/sys/util.h>
 #include <zephyr/sys/printk.h>
 
-#include "my_lib.h"
+#include "say_hello.h"
 
 void say_hello() {
     printk("Printk: Hello from my_lib\n");

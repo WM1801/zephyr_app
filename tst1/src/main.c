@@ -1,8 +1,9 @@
-#include "my_lib.h"
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/random/random.h>
-
+#ifdef CONFIG_SAY_HELLO
+#include "say_hello.h" 
+#endif  
 
 #define SLEEP_TIME_MS   1000
 
@@ -26,15 +27,18 @@ int main(void) {
     }
     //rnd 
     uint32_t rnd; 
-
+    double rnd_float; 
 
    
     while(1)
     {
+        #ifdef CONFIG_SAY_HELLO
         say_hello();
+        #endif
         ret = gpio_pin_toggle_dt(&led);
         rnd = sys_rand32_get();
-        printk("Random number: %u\n", rnd);
+        rnd_float = (double)rnd / (UINT32_MAX + 1.0);
+        printf("Random number: %.5f\n", rnd_float);
         k_msleep(SLEEP_TIME_MS);
     }
    
